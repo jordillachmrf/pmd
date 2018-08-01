@@ -3,6 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>pmd-jsp</artifactId>
     <name>PMD JSP</name>
+    <version>6.6.0.MARFEEL-SNAPSHOT</version>
 
     <parent>
         <groupId>net.sourceforge.pmd</groupId>
@@ -95,6 +96,7 @@
         <dependency>
             <groupId>net.sourceforge.pmd</groupId>
             <artifactId>pmd-core</artifactId>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -113,6 +115,7 @@
         <dependency>
             <groupId>net.sourceforge.pmd</groupId>
             <artifactId>pmd-test</artifactId>
+            <version>${parent.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

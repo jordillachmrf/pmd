@@ -236,7 +236,8 @@ Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code
         <url>https://github.com/pmd/pmd</url>
         <tag>pmd_releases/6.5.0</tag>
     </scm>
-    <distributionManagement>
+
+    <!-- distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -245,7 +246,18 @@ Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code
             <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
+    </distributionManagement -->
+    <distributionManagement>
+        <repository>
+            <id>marfeel-private</id>
+            <url>http://repositories.marfeel.com:60081/nexus/content/repositories/marfeel_private</url>
+        </repository>
+        <snapshotRepository>
+            <id>marfeel-snapshot-private</id>
+            <url>http://repositories.marfeel.com:60081/nexus/content/repositories/marfeel_snapshot_private</url>
+        </snapshotRepository>
     </distributionManagement>
+
     <organization>
         <name>PMD</name>
         <url>https://pmd.github.io/</url>
@@ -611,18 +623,18 @@ Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
+            <!-- plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <!-- if autoReleaseAfterClose is true, then the artifacts will be
-                         automatically promoted to maven central -->
+                     if autoReleaseAfterClose is true, then the artifacts will be
+                         automatically promoted to maven central
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
-            </plugin>
+            </plugin -->
         </plugins>
     </build>
 
@@ -856,7 +868,7 @@ Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
+    <!--repositories>
         <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
@@ -876,8 +888,8 @@ Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    </repositories>
-    <pluginRepositories>
+    </repositories -->
+    <!-- pluginRepositories>
         <pluginRepository>
             <id>central</id>
             <name>Central Repository</name>
@@ -900,7 +912,7 @@ Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories -->
 
     <profiles>
         <profile>
